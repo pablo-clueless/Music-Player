@@ -1,0 +1,17 @@
+{
+  "name": "music-player",
+  "version": "1.0.0",
+  "description": "neomorphism design music player with wave ripple effect",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "music",
+    "player",
+    "neomorphism"
+  ],
+  "author": "Olawale O Samson",
+  "license": "ISC"
+}

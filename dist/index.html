@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Music Player</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="frame">
+      <button class="btn prev-track">
+        <i class="fas fa-backward"></i>
+      </button>
+      <button class="btn play">
+        <i class="fas fa-play"></i>
+      </button>
+      <button class="btn pause">
+        <i class="fas fa-pause"></i>
+      </button>
+      <button class="btn next-track">
+        <i class="fas fa-forward"></i>
+      </button>
+    </div>
+    <div class="screen">
+      <div class="mini-controls">
+        <div class="volume-output">50</div>
+        <div class="shuffle-button">
+          <!-- <i class="fas fa-random"></i> -->
+        </div>
+        <div class="repeat-button"><i class="fas fa-repeat"></i></div>
+      </div>
+      <div class="details">
+        <div class="now-playing">NOT PLAYING</div>
+        <div class="track-art"><img src="./backG.png" alt="" /></div>
+        <div class="track-name"></div>
+        <div class="track-artist"></div>
+      </div>
+      <div class="play-slider">
+        <div class="current-time">00:00</div>
+        <input type="range" id="seeker-slide" min="1" max="100" value="0" />
+        <div class="total-duration">00:00</div>
+      </div>
+    </div>
+    <input
+      type="range"
+      name=""
+      id="volume"
+      value="50"
+      min="0"
+      max="100"
+      step="5"
+    />
+
+    <input id="trigger" type="checkbox" hidden disabled />
+    <label class="trigger" for="trigger"> </label>
+    <div class="dots">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
