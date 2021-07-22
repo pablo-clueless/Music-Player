@@ -24,31 +24,43 @@ let trackList = [
     {
         name: "JT",
         artist: "Jon Bellion",
+        album: "Glory Sound Prep",
+        year: "2020",
         path: "./music/JT.mp3"
     },
     {
         name: "Bohemian Rhapsody",
         artist: "Queen",
+        album: "A Night at the Opera",
+        year: "1975",
         path: "./music/Bohemian_Rhapsody.mp3"
     },
     {
         name: "Flying Without Wings",
         artist: "Artist Two",
+        album: "Flying Without Wings - Single",
+        year: "1999",
         path: "./music/Flying_Without_Wings.mp3"
     },
     {
         name: "Silver & Gold",
         artist: "WILD",
+        album: "Silver & Gold",
+        year: "2016",
         path: "./music/Silver_Gold.mp3"
     },
     {
         name: "Real Life ft. Stormzy",
         artist: "Burna Boy",
+        album: "Twice as Tall",
+        year: "2020",
         path: "./music/Real_life.mp3"
     },
     {
         name: "Uber Everywhere",
         artist: "Travis $cott",
+        album: "Uber Everywhere - Single",
+        year: "2016",
         path: "./music/Uber_Everywhere.mp3"
     }
 ]
@@ -190,6 +202,27 @@ range.addEventListener('change', function(){
     currentTrack.volume = range.value / 100;
     volume.textContent = range.value;
     if(range.value == 0){
-
+        document.querySelector('.mute').classList.add('unshow');
+    } else{
+        document.querySelector('.mute').classList.remove('unshow');
     }
 });
+
+// function outputTracks(){
+//     const trackShow   = document.querySelector('.track-list');
+//     var tracks = JSON.parse(trackList);
+//    var output = "";
+
+//    for(var i in tracks){
+//        output +=`<ul>
+//        <li>Artist:${tracks[i].artist}</li>
+//        <li>Title:${tracks[i].name}</li>
+//        <li>Album:${tracks[i].album}</li>
+//        <li>Release Year:${tracks[i].year}</li>
+//        </ul>
+//        `;
+//    }
+
+//    trackShow.innerHTML = output;
+// }
+// outputTracks();

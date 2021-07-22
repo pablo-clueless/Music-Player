@@ -14,6 +14,39 @@
     />
   </head>
   <body>
+    <div class="box">
+      <div class="screen">
+        <div class="mini-controls">
+          <div class="volume-output">50</div>
+          <div class="shuffle-button">
+            <!-- <i class="fas fa-random"></i> -->
+          </div>
+          <div class="repeat-button"><i class="fas fa-repeat"></i></div>
+          <div class="mute"><i class="fas fa-volume-off"></i></i></div>
+        </div>
+        <div class="details">
+          <div class="now-playing">NOT PLAYING</div>
+          <div class="track-art"><img src="./backG.png" alt="" /></div>
+          <div class="track-name"></div>
+          <div class="track-artist"></div>
+        </div>
+        <div class="play-slider">
+          <div class="current-time">00:00</div>
+          <input type="range" id="seeker-slide" min="1" max="100" value="0" />
+          <div class="total-duration">00:00</div>
+        </div>
+      </div>
+      <input
+        type="range"
+        name=""
+        id="volume"
+        value="50"
+        min="0"
+        max="100"
+        step="5"
+      />
+    </div>
+
     <div class="frame">
       <button class="btn prev-track">
         <i class="fas fa-backward"></i>
@@ -28,43 +61,18 @@
         <i class="fas fa-forward"></i>
       </button>
     </div>
-    <div class="screen">
-      <div class="mini-controls">
-        <div class="volume-output">50</div>
-        <div class="shuffle-button">
-          <!-- <i class="fas fa-random"></i> -->
-        </div>
-        <div class="repeat-button"><i class="fas fa-repeat"></i></div>
-      </div>
-      <div class="details">
-        <div class="now-playing">NOT PLAYING</div>
-        <div class="track-art"><img src="./backG.png" alt="" /></div>
-        <div class="track-name"></div>
-        <div class="track-artist"></div>
-      </div>
-      <div class="play-slider">
-        <div class="current-time">00:00</div>
-        <input type="range" id="seeker-slide" min="1" max="100" value="0" />
-        <div class="total-duration">00:00</div>
-      </div>
-    </div>
-    <input
-      type="range"
-      name=""
-      id="volume"
-      value="50"
-      min="0"
-      max="100"
-      step="5"
-    />
 
-    <input id="trigger" type="checkbox" hidden disabled />
-    <label class="trigger" for="trigger"> </label>
-    <div class="dots">
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
+    <div class="sound">
+      <input id="trigger" type="checkbox" hidden disabled />
+      <label class="trigger" for="trigger"> </label>
+      <div class="dots">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
     </div>
+
+    <!-- <div class="track-list"></div> -->
     <script src="main.js"></script>
   </body>
 </html>

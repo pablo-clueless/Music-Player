@@ -27,6 +27,7 @@ body {
   height: 25vw;
   width: 25vw;
   margin: 10px;
+  z-index: -1;
   background: #e0e5ec;
   box-shadow: 5px 5px 10px rgba(163, 177, 198, 0.6), -5px -5px 10px rgba(255, 255, 255, 0.5);
   border-radius: 50%;
@@ -87,6 +88,8 @@ body {
   align-items: center;
   height: 80px;
   width: 350px;
+  z-index: 7;
+  margin: 15px 0;
    box-shadow:
    -7px -7px 20px 0px #fff9,
    -4px -4px 5px 0px #fff9,
@@ -157,7 +160,7 @@ background: radial-gradient(circle,  #0ff 0%, #e0e5ec 60%);
   justify-content: space-between;
   position: relative;
 }
-.volume-output, .shuffle-button, .repeat-button{
+.volume-output, .shuffle-button, .repeat-button, .mute{
   width: 50px;
   height: 20px;
   border: 1px solid #777;
@@ -171,7 +174,7 @@ input[type="range"]{
   width: 350px;
   height: 8px;
   border-radius: 2px;
-  z-index: 6;
+  z-index: 8;
   box-shadow: inset -7px -7px 20px 0px #fff9,
   inset -4px -4px 5px 0px #fff9,
   inset 7px 7px 20px 0px #0002,
@@ -217,3 +220,28 @@ input[type="range"]::-webkit-slider-thumb{
   width: 170px;
   margin: 3px;
 }
+.track-list{
+  width: 100%;
+  height: 500px;
+  border: 1px solid #777;
+}
+.unshow{
+  display: none;
+}
+
+/* @media screen and (max-width: 820px){
+  .track-list{
+    display: none;
+  }
+}
+
+@media screen and (min-width:900px){
+  body{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  }
+  .box, .frame, .sound, .track-list{
+    width: 100%;
+  }
+} */
