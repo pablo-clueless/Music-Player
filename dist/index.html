@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Music Player</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="screen">
+        <div class="details">
+          <div class="now-playing">NOT PLAYING</div>
+          <div class="track-art"><img src="./backG.png" alt="" /></div>
+          <div class="track-name"></div>
+          <div class="track-artist"></div>
+        </div>
+        <div class="play-slider">
+          <div class="current-time">00:00</div>
+          <input type="range" id="seeker-slide" min="1" max="100" value="0" />
+          <div class="total-duration">00:00</div>
+        </div>
+        <div class="album">
+          <p class="name"></p>
+          <p class="year"></p>
+        </div>
+      </div>
+      <div class="volume-box">
+        <div class="volume-output">50</div>
+        <input type="range" name="" id="volume" value="50" min="0" max="100" step="5" />
+      </div>
+      <div class="frame">
+        <button class="prev-track">
+          <i class="fas fa-backward"></i>
+        </button>
+        <button class="play">
+          <i class="fas fa-play"></i>
+        </button>
+        <button class="pause">
+          <i class="fas fa-pause"></i>
+        </button>
+        <button class="next-track">
+          <i class="fas fa-forward"></i>
+        </button>
+      </div>
+      <div class="sound">
+        <div class="dots">
+        </div>
+      </div>
+      
+    <!-- <div class="track-list"></div> -->
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>

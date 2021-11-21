@@ -1,8 +1,7 @@
-const playBtn     = document.querySelector('.fa-play');
-const pauseBtn    = document.querySelector('.fa-pause');
-const fwdBtn      = document.querySelector('.fa-forward');
-const bwdBtn      = document.querySelector('.fa-backward');
-const trigger     = document.querySelector('#trigger');
+const playBtn     = document.querySelector('.play');
+const pauseBtn    = document.querySelector('.pause');
+const fwdBtn      = document.querySelector('.next-track');
+const bwdBtn      = document.querySelector('.prev-track');
 const nowPlaying  = document.querySelector('.now-playing');
 const trackArt    = document.querySelector('.track-art');
 const trackName   = document.querySelector('.track-name');
@@ -10,8 +9,10 @@ const trackArtist = document.querySelector('.track-artist');
 const currentTime = document.querySelector('.current-time');
 const totalTime   = document.querySelector('.total-duration');
 const seekSlider  = document.querySelector('#seeker-slide');
-const shuffleBtn  = document.querySelector('.shuffleBtn');
-const repeatBtn   = document.querySelector('.repeat-button');
+// const shuffleBtn  = document.querySelector('.shuffleBtn');
+// const repeatBtn   = document.querySelector('.repeat-button');
+const albumName   = document.querySelector('.name');
+const albumYear   = document.querySelector('.year');
 
 //global values
 let isPlaying  = false;
@@ -37,8 +38,8 @@ let trackList = [
     },
     {
         name: "Flying Without Wings",
-        artist: "Artist Two",
-        album: "Flying Without Wings - Single",
+        artist: "West Life",
+        album: "Flying Without Wings",
         year: "1999",
         path: "./music/Flying_Without_Wings.mp3"
     },
@@ -59,7 +60,7 @@ let trackList = [
     {
         name: "Uber Everywhere",
         artist: "Travis $cott",
-        album: "Uber Everywhere - Single",
+        album: "Uber Everywhere",
         year: "2016",
         path: "./music/Uber_Everywhere.mp3"
     }
@@ -84,6 +85,8 @@ function loadTrack(trackIndex) {
         "url(" + trackList[trackIndex].image + ")";
     trackName.textContent = trackList[trackIndex].name;
     trackArtist.textContent = trackList[trackIndex].artist;
+    albumName.textContent = 'Album: '+trackList[trackIndex].album;
+    albumYear.textContent = 'Year: '+trackList[trackIndex].year
     nowPlaying.textContent =
         "PLAYING " + (trackIndex + 1) + " OF " + trackList.length;
     
@@ -107,16 +110,16 @@ playBtn.addEventListener('click', function playTrack(){
     //trigger.checked = "checked";
     currentTrack.play();
     isPlaying = true;
-    if(isPlaying = true){
-        trigger.checked = "checked";
+    if(isPlaying) {
+    document.querySelector(".dots").style.animationPlayState = "running"
     }
 });
 pauseBtn.addEventListener('click', function(){
     //trigger.checked = null;
     currentTrack.pause();
     isPlaying = false;
-    if (!isPlaying) {
-        trigger.checked = null;
+    if(!isPlaying) {
+    document.querySelector(".dots").style.animationPlayState = "paused"
     }
 });
 
