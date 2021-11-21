@@ -166,6 +166,39 @@ main {
     }
 }
 
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 40px;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer p {
+    color: var(--pry);
+}
+
+footer span {
+    margin: 5px 0;
+}
+
+footer span a {
+    color: var(--alt);
+}
+
+footer em a {
+    font-size: 1.2rem;
+    margin: 0 10px;
+    color: var(--sec);
+}
+
+footer em a:hover {
+    color: var(--pry);
+}
 
 @media screen and (max-width: 500px) {
     main {
